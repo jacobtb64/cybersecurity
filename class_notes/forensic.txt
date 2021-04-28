@@ -1,0 +1,152 @@
+Legal Requirements
+Why is it important to preserve the integrity of digital evidence?
+
+Forensic evidence that is intended to be used in legal proceedings must satisfy a set of legal standards in order to be admissible.
+
+Imagine the disappointment of spending months searching through computer and network systems collecting evidence, only to have it considered inadmissible and thrown out due to improper procedures.
+
+Forensic evidence is held to the same standards as any other evidence submitted in a legal case. All evidence must be wholly intact and unaltered from the scene of the crime.
+
+Once evidence is collected, the investigator or analyst is accountable for its ownership and whereabouts at all times.
+
+
+Chain of Custody
+A chain of custody is a documentation of the possession of evidence.
+
+Evidence taken into custody must be accounted for. This means that its whereabouts and ownership must be accurately documented at all times, from the time it is acquired to when it is presented in the court room.
+
+When testifying about the integrity of evidence, one must be able to provide a documented, uninterrupted chain of custody, which includes:
+
+A detailed log of each person who accessed or handled the evidence.
+The purpose of that access.
+Dates and times it was handled.
+
+If you are not able to show an uninterrupted chain of custody, months or even years of hard work can be considered inadmissible in a court of law, leading to the possible release of criminals. This is why it's so critical to ensure that a proper chain of custody is maintained at all times.
+
+
+The Digital Forensic Process
+The National Institute of Standards and Technology defines a process for performing digital forensics in Special Publication 800-86 as follows:
+
+Collection: We must first collect the data before we can examine and analyze it. The collection phase is the springboard to the digital forensics process which includes identifying, labeling, recording, and acquiring data from sources while following procedures to preserve the integrity of the data.
+
+Examination: After we've collected the evidence, we begin the examination phase, which ensures that all data collected is relevant to the case. This includes forensically processing collected data and assessing and extracting data of interest while preserving the integrity of the data. This usually means working from a copy, rather than the original.
+
+Analysis: After we've identified all relevant evidence, we being the analysis phase by analyzing the results of the examination, using legally approved methods and techniques, to derive information that addresses the questions that inspired the collection and examination.
+
+Reporting: After we've analyzed all of the evidence, digital forensic investigators are required to formally report the results of the analysis, which may include describing the actions used, explaining how tools and procedures were selected, determining what other actions need to be performed, and recommended improvements to the forensic process.
+
+
+Evidence Acquisition
+Evidence acquisition is one of the most critical steps in the entire forensic process. If done improperly, it can result in evidence being missed, lost, or inadmissible in a court of law.
+
+Digital forensic data has one of two classifications: network-based or host-based.
+
+Network-based data comes from data communications captured by network-based systems such as an IDS, IPS, and firewalls, in the form of a packet capture or similar.
+
+Packet captures are useful for reconstructing events involving computer break-ins.
+
+Logs from firewalls also provide insight into network activity.
+
+Host-based data is typically found on a system that encompasses a wide variety of artifacts.
+
+Investigations involving computer break-ins may involve the forensic examination of local file systems, programs, access to critical documents, and/or alterations to system files and directories.
+
+Host-based examinations may involve reconstructing internet use, unauthorized activity, email recovery, and the identification of malicious files.
+
+
+Evidence Acquisition
+Evidence acquisition is one of the most critical steps in the entire forensic process. If done improperly, it can result in evidence being missed, lost, or inadmissible in a court of law.
+
+Digital forensic data has one of two classifications: network-based or host-based.
+
+Network-based data comes from data communications captured by network-based systems such as an IDS, IPS, and firewalls, in the form of a packet capture or similar.
+
+Packet captures are useful for reconstructing events involving computer break-ins.
+
+Logs from firewalls also provide insight into network activity.
+
+Host-based data is typically found on a system that encompasses a wide variety of artifacts.
+
+Investigations involving computer break-ins may involve the forensic examination of local file systems, programs, access to critical documents, and/or alterations to system files and directories.
+
+Host-based examinations may involve reconstructing internet use, unauthorized activity, email recovery, and the identification of malicious files.
+
+
+Where's the Data? File System and Data Storage
+
+An iPhone does not have external storage. All data is stored in flash memory on the device.
+
+Remember: Flash memory retains data without any external power and is used in SSDs and smartphones.
+
+Flash memory on an iPhone exists until it is overwritten.
+
+An iPhone (Flash memory) drive contains two disk partitions:
+
+The root partition is used for the operating system and applications.
+
+The var partition is used for user data.
+
+Data is first imaged using a bit-level copy.
+
+In an iPhone, this will recover deleted messages as well as GPS coordinates and cell tower locations.
+
+iPhones allow users to back up their data to the cloud, which can be another source of data in an investigation, especially when the device is not available.
+
+What challenges does iCloud data present to a forensic investigator?
+
+Isolating and securing the evidence is challenging when data is in multiple locations. Also, SLAs must be recognized when dealing with other companies, in addition to other legal issues.
+
+
+Important Directories / Databases and Files
+
+
+
+The following directories contain evidence applicable to the Tracy iPhone investigation.
+
+/mobile
+/Applications
+/Library
+/root
+/Logs
+/logs
+
+Since iPhone's iOS is based on Unix, the directory structure should be familiar.
+
+Most information is in human-readable format within the Autopsy application.
+
+The iPhone stores user data in SQL databases and other files.
+
+SQL stands for Structured Query Language, and is a language used to create, read, update, and delete (commonly abbreviated CRUD) database files.
+
+These are the main databases that applications such as mail, SMS, calendar, and the address book use:
+
+AddressBook.sqlitedb contains contact information and personal data like name, email address, etc.
+
+AddressBookImages.sqlitedb contains images associated with saved contacts.
+
+Calendar.sqlitedb contains calendar details and events information.
+
+CallHistory.db contains incoming and outgoing call logs including phone numbers and time stamps.
+
+sms.db contains text and multimedia messages along with their time stamps.
+
+voicemail.db contains voicemail messages.
+
+Safari/Bookmarks.db contains saved URL addresses.
+
+Envelope Index contains email addresses.
+
+consolidated.db contains GPS tracking data.
+
+locationd contains the Google coordinates of places.
+
+iPhones also have data stored in plists, or property lists. A plist stores configuration information, call history, and cache information (i.e., websites visited).
+
+Maps/History.plist keeps track of location searches.
+
+Maps/Bookmarks.plist contains bookmarks.
+
+Safari/History.plist contains internet browsing history.
+
+/logs and /Logs contain device information.
+

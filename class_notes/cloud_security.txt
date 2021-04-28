@@ -1,0 +1,168 @@
+Complex architecture: Systems must be built to both ensure basic security, and allow infrastructure personnel to securely monitor, reconfigure, and redeploy machines as needed. 
+This is typically easier to do securely with on-premises machines, since these are not exposed to public networks unless they need to be. 
+But cloud deployments are remote, and therefore we must take extra steps to ensure they are only exposed to the relevant parties.
+
+Extensive management: The cloud offers much more flexibility than organizations are used to, giving them freedom to create many more machines.
+This flexibility is a good thing, but it also makes operations management more complex. Machines can appear and disappear seemingly at random, so properly tracking everything requires additional skills and techniques.
+
+Different threats: The cloud is exposed to public networks. Cloud providers handle certain aspects of security for an organization, which means security professionals have new and different things they must pay attention to.
+Malicious actors will execute escalation and lateral movement tactics differently on the cloud than on-premises.
+
+Ensuring availability: High availability of machines is a large part of security on the cloud. Ensuring availability and redundancy on the cloud is done differently than with on-premises environments.
+
+
+aaS (Infrastructure as a Service): A service provider offers pay-as-you-go access to storage, networking, servers and other computing resources in the cloud.
+
+Security benefits include high availability, guarantees that base machines are up-to-date at the time of deployment, and provider-enforced security controls, such as basic access management.
+
+Organizations can focus on implementing functionality and security that is relevant only to their business concerns, and not worry about the basics of secure deployments.
+
+AWS, Azure, and Google Cloud all offer IaaS.
+
+
+PaaS (Platform as a Service): A service provider offers access to a cloud-based environment in which users can build and deliver applications. The provider supplies the underlying infrastructure.
+
+Organizations can leverage powerful applications that are guaranteed to be secure and available, without having to properly implement security themselves.
+
+Azure Classroom Labs, on top of which this course's lab environments are deployed, is one example. It guarantees availability and provides access only to the ports necessary to connect to the labs.
+
+
+SaaS (Software as a Service): A service provider delivers software and applications through the internet. Users subscribe to the software and access it through the web or vendor APIs.
+
+The software runs in environments that are guaranteed by the provider to be secure. Engineers do not need to worry about secure deployment.
+
+Cloud software such as the Microsoft 365 Cloud Office Suite and Apple's Cloud iWork are examples of SaaS.
+
+
+DaaS/DBaaS (Data as a Service/Database as a Service): A service that provides a company's data product to the user on demand, regardless of geographic or organizational distance between provider and consumer.
+
+The main security advantages are high-availability and fault tolerance. DaaS ensures data is always available, even if there is a power outage at a single data center, and ensures that data is still deployed from a center as close to those consuming it, in order to reduce latency.
+
+An example of a DaaS is a marketing company that keep databases of consumers categorized for many different industries.
+
+
+CaaS (Communications as a Service): A service that provides an outsourced communications solution. Such communications can include Voice over IP (VoIP or Internet telephony), instant messaging (IM), and collaboration and video conference applications.
+
+CaaS guarantees security by ensuring that communications are not vulnerable to eavesdropping, and provides comprehensive monitoring/record-keeping for auditing purposes.
+
+Zoom, FaceTime, Skype, and GoToMeeting are all examples of CaaS.
+
+
+XaaS (Anything as a Service): Cloud services providing all any combination of the offerings mentioned so far.
+These services are presented differently by different providers. As well, some providers offer simplified versions of these services to make them easier to implement.
+
+
+Some pros and cons of using a pre-configured service as opposed to building a custom solution:
+
+A pre-configured service is faster to set up.
+A pre-configured service requires less training and research for a system administrator.
+A custom solution gives the organization complete control over the solution.
+A custom solution may be less expensive, but requires more internal training.
+
+
+RAM (Random Access Memory) is the amount of memory dedicated to running computer operations. The computer uses RAM to temporarily store data that it needs to access quickly.
+
+When an application runs, it runs on RAM. The computer puts all of the needed bits of the application into RAM and accesses them to complete the operation of the application.
+
+The more RAM is on a computer, the more applications a computer can run simultaneously.
+
+When the computer is restarted, the RAM is cleared and the process of loading applications to RAM is restarted.
+
+RAM is measured in increments of 8 bytes. Today's common values are 8, 16, and 32 GB on personal computers, and much more (128+ GB) on servers.
+
+
+Storage (HDD/SSD) is the part of the computer that stores data permanently. This is data that you do not lose when the computer is turned off.
+
+HDD (hard disk drive) is a magnetic disk that spins inside a casing. The disk is read with a small magnet attached to an arm, similar to the way a record player reads a record.
+
+SSD (solid state drive) is a more technologically advanced form of storage. Because HDDs have moving parts, they eventually wear out and stop working. An SSD has no moving parts and is based on the same technology that RAM uses.
+
+SSDs are faster and more reliable than HDDs but also more expensive. For now, both options still exist, and which you choose will depend on the needs of the computer and your budget. SSDs are great for data that needs to be accessed quickly and HDDs are great when you have very large amounts of data that do not need to be accessed often or quickly.
+
+For virtual servers, long term storage is essentially a database that the server or OS needs to read and write to.
+
+For example: Information for user logins is stored in one database on either an HDD or an SSD, and the operating system is stored on a different HDD or SSD, depending on how the machine is set up.
+
+Long-term storage is measured in gigabytes and terabytes.
+
+
+Disks attached to a VM fall into two general categories:
+
+OS disks contain the operating system, kernel, and everything required for the VM to function.
+
+Data disks contain data that the VM doesn't need in order to run, but which users need in order to do their jobs. This might include:
+
+Virtual machine images, in the case of Azure classroom labs.
+Text data, if you're using a cloud VM to do "normal work."
+Forensic disk images, if you're using a cloud VM for investigative duties.
+Audio, images, and video data, if you're using the machine to perform heavy-duty graphical processing, such as speech or facial recognition.
+
+Cloud providers allow you to choose different kinds of disks, depending on your needs:
+
+As mentioned above, you can use a simple HDD if all you need is persistent storage of basic information, such as text, spreadsheets, or forensic disk images.
+
+Or you can choose a premium SSD if you need to be able to quickly run memory-intensive applications, such as FTK or Autopsy.
+
+
+The cloud provides users a ton of flexibility and choice, but some options are far more expensive than others. What you choose should depend on your specific needs.
+
+It is affordable to use the cloud to experiment with high-performing hardware for short periods of time.
+
+Threat intelligence professionals, for instance, often use powerful GPU-driven machines for machine learning and computationally intensive data analysis. This is because it's much cheaper to use these machines for short periods of time on the cloud than to purchase and maintain them.
+
+However, premium storage and top-of-the-line machines are just as expensive for cloud providers to own and maintain as they would be for an individual or organization. Using them without first establishing cost controls can quickly result in massive expenses.
+
+
+CPU (Central Processing Unit) is like the brain of the computer. It's the part that actually computes all the ones and zeros. The CPU takes code and data out of the long term storage, loads it into RAM, and performs the computations specified by an application.
+
+4hen you are waiting for a computer to complete a task, such as installing software or copying data from one location to another, you are waiting for the CPU to complete the necessary computations.
+
+The speed of a CPU is measured in hertz, which is the measurement of how many bits can be processed from a zero to a one per second. Today's CPUs are measured in gigahertz.
+
+A virtual computer has a software version of these components. When we create a virtual computer, we define the "hardware," such as the amount of RAM, the storage space, and the CPU. Once it is defined, we install an operating system and use the VM as if it were a normal computer.
+The physical servers located inside data centers have enormous amounts of RAM, storage space, and CPU power, so they can run many virtual computers at the same time. One physical server can easily run more than ten virtual machines, depending on the resources assigned to each VM. Virtual machines can even run other virtual machines.
+Before working with devices on the cloud, we must always set budget limits and cost-control policies. Otherwise, we can accidentally exceed our employer's budgets.
+
+Azure provides cost-control tools as a free service, which you are encouraged to study before managing live cloud deployments. We will not be using such expensive tools in class as it fall outside the scope of the course. However, they offer crucial functionality for managing live deployments on the job.
+
+
+Containers can be thought of as lightweight VMs. They're smaller than VMs, being megabytes rather than gigabytes, and require fewer CPU resources.
+- Because they are smaller, they can be downloaded and distributed more easily. Since they're cheap, more of them can be run. They're also easier and faster to destroy and redeploy as needed.
+
+Provisioners are tools that automatically configure VMs or containers for you. Instead of manually logging into a machine and issuing commands like apt get or editing configuration files yourself, you can use a provisioner to do this automatically.
+- The primary benefits of provisioners are that they a.) drastically reduce the potential for human error and b.) make it easy to configure potentially thousands of identical machines all at once.
+
+Infrastructure as code (IaC) is the idea that the configurations for all of the VMs, containers, and networks in your deployment should be defined in text files, which you can use with provisioners to automatically recreate machines and networks whenever necessary.
+- The primary benefit to IaC is that everyone can see exactly how the network is configured by reading text files. These can easily be version controlled in a tool like Git, or Apple Time Machine and Microsoft OneDrive.
+
+Continuous Integration/Continuous Deployment (CI/CD) is the concept of automatically updating machines on your network whenever your IaC files change. In other words, whenever you change a machine's configuration file, CI ensures that a new version of that machine is built immediately. CD ensures that this new version is automatically deployed to your live environment.
+- The primary advantage to CI/CD is that it allows you to manage your entire network by simply updating IaC text files.
+
+
+Secure configuration ensures that an individual VM or network is protected from intrusion using well-considered rules, such as access control policies and firewall rules. A securely configured VM or network is secure because it follows the right rules.
+
+Secure architecture ensures that a poorly configured or malfunctioning individual machine can only cause a limited amount of damage. A secure network is secure because it is "structurally sound."
+
+
+A load balancer provides a website an external IP address that is accessed by the internet.
+
+The load balancer receives any traffic that comes into the website and distributes it across multiple servers.
+
+As the website receives more traffic, more servers can be added to the group ("pool") of servers that the load balancer has access to. This helps distribute traffic evenly among the servers and mitigates DoS attacks.
+
+A load balancer typically also has a health probe function. This function checks regularly to make sure all of the machines behind the load balancer are functioning before sending traffic to them. Machines with issues are reported, and the load balancers stop sending traffic to those machines.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
